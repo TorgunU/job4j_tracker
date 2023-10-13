@@ -1,10 +1,10 @@
 package ru.job4j.inheritance;
 
 public class PizzaExtraCheeseExtraTomato extends PizzaExtraCheese {
-    private final String tomatoName = "extra tomato";
+    private static final String TOMATO_NAME = "extra tomato";
 
     @Override
     public String name() {
-        return super.name() + " + " + tomatoName;
+        return super.name() + " + " + TOMATO_NAME;
     }
 }
