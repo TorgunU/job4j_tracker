@@ -30,11 +30,11 @@ public class Item {
         return name;
     }
 
-    public LocalDateTime getCreated() {
-        return created;
-    }
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public LocalDateTime getCreated() {
+        return created;
     }
 }
