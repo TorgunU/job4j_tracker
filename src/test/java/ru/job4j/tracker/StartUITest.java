@@ -21,14 +21,14 @@ class StartUITest {
         Input input = new StubInput(answers);
         Tracker tracker = new Tracker();
         StartUI.createItem(input, tracker);
+        StartUI.createItem(input, tracker);
         Item[] result = tracker.findAll();
         Item[] expected =
                 {
                         new Item("Fix bug"),
                         new Item("Push commit")
                 };
-        for (int i = 0; i < result.length; i++) {
-            assertThat(result[i].getName()).isEqualTo(expected[i].getName());
-        }
+        assertThat(result[0].getName()).isEqualTo(expected[0].getName());
+        assertThat(result[1].getName()).isEqualTo(expected[1].getName());
     }
 }
