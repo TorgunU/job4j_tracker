@@ -7,6 +7,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class FactorialTest {
     @Test
+    public void when3That6() {
+        Factorial factorial = new Factorial();
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> factorial.calc(-1)
+        );
+        assertThat(exception.getMessage()).isEqualTo("Number could not be less then 0");
+    }
+
+    @Test
     public void whenIllegalArgumentExceptionThrown() {
         Factorial factorial = new Factorial();
         IllegalArgumentException exception = assertThrows(
