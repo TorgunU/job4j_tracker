@@ -6,13 +6,11 @@ import java.util.List;
 public class ConvertList {
     public static List<Integer> convert(List<int[]> list) {
         List<Integer> result = new ArrayList<>();
-
-        for (int[] numbers : list) {
-            for (int number : numbers) {
-                result.add(number);
+        for (int[] row : list) {
+            for (int cell : row) {
+                result.add(cell);
             }
         }
-
         return result;
     }
 }
