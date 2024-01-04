@@ -48,7 +48,6 @@ public class Tracker {
         int index = indexOf(id);
         boolean result = index != -1;
         if (result) {
-            //System.arraycopy(items, index + 1, items, index, items.size() - index - 1);
             items.remove(items.size() - 1);
         }
     }
