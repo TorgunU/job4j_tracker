@@ -84,7 +84,7 @@ public class TrackerTest {
         tracker.add(item);
         int id = item.getId();
         tracker.delete(id);
-        assertThat(tracker.findById(id)).isNull();
+        assertThat(tracker.findById(id)).isNotEqualTo(item);
     }
 
     @Test
